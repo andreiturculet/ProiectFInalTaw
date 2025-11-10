@@ -8,7 +8,8 @@ services:
       CHOKIDAR_USEPOLLING: true
       CHOKIDAR_INTERVAL: 100
     ports:
-      - "5173:5173"
+      # Mapăm un interval de porturi pentru Vite, deoarece poate alege alt port dacă 5173 este ocupat
+      - "5173-5180:5173-5180"
     volumes:
       - .:/app
       # exclude
