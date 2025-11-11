@@ -2,15 +2,13 @@
   <!-- Comentariu: Pagina de înregistrare reutilizează formularul dedicat -->
   <div class="flex min-h-screen flex-col">
     <Header />
-    <main class="flex flex-1 flex-col items-center justify-center gap-8 px-6 py-16">
-      <div class="w-full max-w-md text-center">
-        <h1 class="mb-2 text-2xl font-bold tracking-tight text-slate-900">Creează un cont</h1>
-        <p class="text-sm text-slate-500">hai sa facem un cont rapid</p>
+    <main class="flex flex-1 items-center justify-center px-6 py-16">
+      <div class="w-full max-w-md mx-auto flex flex-col items-stretch gap-6 text-center bg-white rounded-2xl shadow-sm p-8">
+        <SignupForm />
+        <RouterLink class="text-sm text-brand-600 hover:underline" to="/login">
+          Ai deja cont? Autentifică-te
+        </RouterLink>
       </div>
-      <SignupForm />
-      <RouterLink class="text-sm text-brand-600 hover:underline" to="/login">
-        Ai deja cont? Autentifică-te
-      </RouterLink>
     </main>
     <Footer />
   </div>

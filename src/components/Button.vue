@@ -1,4 +1,4 @@
-<template>
+vreai<template>
   <!-- Comentariu: Buton reutilizabil care emite eveniment și poate primi handler -->
   <button
     type="button"
