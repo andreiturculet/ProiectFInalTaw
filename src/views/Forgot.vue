@@ -1,22 +1,62 @@
+<!-- 
+  se deschide la ruta /forgot
+  pagina resetare parola
+-->
 <template>
-  <!-- Comentariu: Pagina pentru resetarea parolei -->
-  <div class="flex min-h-screen flex-col">
-    <Header />
-    <main class="flex flex-1 flex-col items-center justify-center gap-8 px-6 py-16">
+  <AuthLayout
+    brandName="Numele Brandului"
+    tagline="Resetează-ți parola pentru a reveni în cont."
+    logoSrc="/logo.svg"
+  >
+    <template #left-cta>
+      <RouterLink class="prompt-btn" to="/login">Înapoi la autentificare</RouterLink>
+    </template>
+
+    <AuthCard>
       <ForgotForm />
-      <RouterLink class="text-sm text-brand-600 hover:underline" to="/login">
-        Înapoi la autentificare
-      </RouterLink>
-    </main>
-    <Footer />
-  </div>
+      <div class="auth-links">
+        <RouterLink to="/login">Înapoi la autentificare</RouterLink>
+      </div>
+    </AuthCard>
+  </AuthLayout>
 </template>
 
 <script setup>
-// Comentariu: Încarcăm componentele reutilizabile necesare
 import { RouterLink } from 'vue-router'
-import Footer from '@/components/Footer.vue'
+import AuthLayout from '@/components/layout/AuthLayout.vue'
+import AuthCard from '@/components/AuthCard.vue'
 import ForgotForm from '@/components/ForgotForm.vue'
-import Header from '@/components/Header.vue'
 </script>
 
+<style scoped>
+.prompt-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-links {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+</style>

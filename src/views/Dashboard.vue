@@ -1,18 +1,24 @@
+<!-- 
+
+  Dashboard.vue
+
+  se deschide la ruta /dashboard
+
+  pagina principala cu grid butoane pentru toate sectiunile
+
+-->
 <template>
-  <!-- Comentariu: Dashboard simplu, ca înainte: header + mesaj + grid + footer -->
-  <div class="flex min-h-screen flex-col">
-    <Header />
-    <main class="flex flex-1 flex-col gap-6 px-6 py-12">
+  <DashboardLayout>
+    <template #page-header>
       <DashboardHeader userName="Andrei" />
-      <DashboardGrid />
-    </main>
-    <Footer />
-  </div>
+    </template>
+
+    <DashboardGrid />
+  </DashboardLayout>
 </template>
 
 <script setup>
-import Footer from '@/components/Footer.vue'
-import Header from '@/components/Header.vue'
+import DashboardLayout from '@/components/layout/DashboardLayout.vue'
 import DashboardHeader from '@/components/DashboardHeader.vue'
 import DashboardGrid from '@/components/DashboardGrid.vue'
 </script>

@@ -1,29 +1,68 @@
+<!-- 
+
+  Login.vue
+
+  se deschide la ruta /login
+
+  pagina autentificare cu formular email si parola
+
+-->
 <template>
-  <!-- Comentariu: Pagina de login afișează formularul și link-urile relevante -->
-  <div class="flex min-h-screen flex-col">
-    <Header />
-    <main class="flex flex-1 items-center justify-center px-6 py-16">
-      <div class="w-full max-w-md mx-auto flex flex-col items-stretch gap-6 text-center bg-white rounded-2xl shadow-sm p-8">
-        <LoginForm />
-        <div class="flex flex-col items-center gap-2 text-sm text-slate-500">
-          <RouterLink class="text-brand-600 hover:underline" to="/forgot">
-            Ai uitat parola?
-          </RouterLink>
-          <RouterLink class="text-brand-600 hover:underline" to="/signup">
-            Nu ai cont? Creează unul
-          </RouterLink>
-        </div>
+  <AuthLayout
+    brandName="Numele Brandului"
+    tagline="Bun venit în aplicația ta. Autentifică-te pentru a continua."
+    logoSrc=""
+  >
+    <template #left-cta>
+      <RouterLink class="prompt-btn" to="/signup">Creează cont</RouterLink>
+    </template>
+
+    <AuthCard>
+      <LoginForm />
+      <div class="auth-links">
+        <RouterLink to="/forgot">Ai uitat parola?</RouterLink>
+        <RouterLink to="/signup">Nu ai cont? Creează unul</RouterLink>
       </div>
-    </main>
-    <Footer />
-  </div>
+    </AuthCard>
+  </AuthLayout>
 </template>
 
 <script setup>
-// Comentariu: Aducem componentele necesare pentru pagina de autentificare
 import { RouterLink } from 'vue-router'
-import Footer from '@/components/Footer.vue'
-import Header from '@/components/Header.vue'
+import AuthLayout from '@/components/layout/AuthLayout.vue'
+import AuthCard from '@/components/AuthCard.vue'
 import LoginForm from '@/components/LoginForm.vue'
 </script>
 
+<style scoped>
+.prompt-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-links {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+.auth-links a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+</style>

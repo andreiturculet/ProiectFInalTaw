@@ -1,5 +1,9 @@
+<!-- 
+  Componentă root: App.vue - componenta principală a aplicației
+  Conține RouterView care afișează pagina corespunzătoare rutei curente
+  Aplică un gradient de fundal pentru întreaga aplicație
+-->
 <template>
-  <!-- Comentariu: Aplicația folosește RouterView pentru a reda paginile -->
   <div class="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
     <RouterView />
   </div>

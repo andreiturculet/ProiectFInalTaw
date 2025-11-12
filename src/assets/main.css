@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Project custom base styles (kept after Tailwind directives) */
 * {
   box-sizing: border-box;
 }

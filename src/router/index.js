@@ -1,3 +1,6 @@
+// Configurarea router-ului Vue - definește toate rutele aplicației
+// Fiecare rută este conectată la o componentă din folderul views
+// Router-ul gestionează navigarea între pagini fără reîncărcarea completă a paginii
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({

@@ -1,5 +1,13 @@
+<!-- 
+
+  NavLink.vue
+
+  folosit in Header
+
+  link navigare reutilizabil cu highlight activ
+
+-->
 <template>
-  <!-- Comentariu: Legătură reutilizabilă bazată pe RouterLink -->
   <RouterLink :to="to" v-slot="{ isActive }">
     <span
       :class="[

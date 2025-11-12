@@ -1,5 +1,13 @@
+<!-- 
+
+  DashboardGrid.vue
+
+  folosit in pagina Dashboard
+
+  grid cu butoane pentru toate sectiunile
+
+-->
 <template>
-  <!-- Comentariu: Două coloane de acțiuni rapide similare cu butoanele din Home -->
   <section class="mx-auto w-full max-w-5xl px-4 sm:px-6">
     <div class="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
       <RouterLink

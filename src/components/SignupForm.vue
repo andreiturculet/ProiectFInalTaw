@@ -1,5 +1,13 @@
+<!-- 
+
+  SignupForm.vue
+
+  folosit in pagina Signup
+
+  formular inregistrare cu nume email si parola
+
+-->
 <template>
-  <!-- Comentariu: Formular simplu pentru înregistrare fără validări reale -->
   <form
     class="w-full max-w-md space-y-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
     @submit.prevent="handleSubmit"

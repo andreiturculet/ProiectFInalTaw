@@ -1,5 +1,13 @@
+<!-- 
+
+  InputField.vue
+
+  folosit in formularele de autentificare
+
+  camp input reutilizabil cu v-model
+
+-->
 <template>
-  <!-- Comentariu: Câmp de input simplu cu suport pentru v-model -->
   <label class="flex w-full flex-col gap-1 text-sm text-slate-600">
     <span class="font-medium">{{ label }}</span>
     <input

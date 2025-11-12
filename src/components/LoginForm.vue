@@ -1,5 +1,13 @@
+<!-- 
+
+  LoginForm.vue
+
+  folosit in pagina Login
+
+  formular autentificare cu email si parola
+
+-->
 <template>
-  <!-- Comentariu: Formular de autentificare de bază fără logică backend -->
   <form
     class="w-full max-w-md space-y-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm"
     @submit.prevent="handleSubmit"
